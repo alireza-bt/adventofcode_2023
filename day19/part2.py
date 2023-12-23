@@ -31,7 +31,7 @@ def recursive_range_run(xmas, rule):
             if '>' in con:
                 val, num = con.split('>')
                 newXmas = deepcopy(xmas)
-                if newXmas[val][0] > int(num):
+                if newXmas[val][1] > int(num):
                     newXmas[val][0] = max(xmas[val][0], int(num)+1)
                     if to == 'A':
                         rangesum += end_sum(newXmas)
